@@ -10,7 +10,7 @@
   - 「じゃ、おやすみっ！ ぐー。」
     - 寝る子は育つ
     - <img src=https://github.com/user-attachments/assets/ec4ca2b6-ecfd-4f31-bac0-7f65d528452f width="400">
-- 日曜日の12時
+- 日曜日の昼の12時
   - 「昼寝をするわっ！」
     - 休む時も全力
     - <img src=https://github.com/user-attachments/assets/e09e3022-e982-495e-ae35-7e6a4f77217d width="300">
