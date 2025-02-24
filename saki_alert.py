@@ -10,9 +10,9 @@ def time_based_comment():
     if 4 <= now.hour < 5:
         print("朝の4時よ！これから走りに出るんでしょ？")
     elif 20 <= now.hour < 21:
-        print("じゃあ、おやすみ！")
+        print("じゃあ、おやすみっ！ ぐー。")
     elif now.weekday() == 6 and 12 <= now.hour < 13:
-        print("昼寝をするわ！")
+        print("昼寝をするわっ！")
     else:
         print("お姉ちゃんに任せなさいっ!")
     print()
