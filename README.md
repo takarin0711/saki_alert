@@ -10,7 +10,7 @@
   - 「じゃ、おやすみっ！ ぐー。」
     - 寝る子は育つ
     - <img src=https://github.com/user-attachments/assets/ec4ca2b6-ecfd-4f31-bac0-7f65d528452f width="400">
-- 夜の8時〜翌朝4時
+- 夜の9時〜翌朝4時
   - 「……すぅ……」
     - 寝ています。鼻つまんでも起きません、寝かせておいてあげましょう
     - <img src=https://github.com/user-attachments/assets/764397db-ca26-4057-acac-3df4dc0091d0 width="400">
