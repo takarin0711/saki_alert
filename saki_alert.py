@@ -7,6 +7,7 @@ import time
 from PIL import Image, ImageTk
 import requests
 from io import BytesIO
+import argparse
 
 def get_image_from_url(url, max_width=250, max_height=250):
     """URLから画像を取得してアスペクト比を保持してリサイズ"""
@@ -118,19 +119,30 @@ def time_based_comment():
     root.destroy()
 
 def main():
-    # スケジュールの設定
-    schedule.every().day.at("04:00").do(time_based_comment)  # 朝4時
-    schedule.every().day.at("20:00").do(time_based_comment)  # 夜8時
-    schedule.every().day.at("21:00").do(time_based_comment)  # 夜9時
-    schedule.every().sunday.at("12:00").do(time_based_comment)  # 日曜の昼12時
+    parser = argparse.ArgumentParser(description='咲季アラートシステム')
+    parser.add_argument('--test', action='store_true', 
+                       help='手動実行モード（アラートを即座に表示）')
+    args = parser.parse_args()
     
-    print("咲季アラートシステムが開始されました...")
-    print("終了するには Ctrl+C を押してください")
-    
-    # バックグラウンドでスケジュールを実行
-    while True:
-        schedule.run_pending()
-        time.sleep(60)  # 1分間隔でチェック
+    if args.test:
+        # 手動実行モード
+        print("手動実行モード: 咲季のアラートを表示します...")
+        time_based_comment()
+    else:
+        # 定期実行モード
+        # スケジュールの設定
+        schedule.every().day.at("04:00").do(time_based_comment)  # 朝4時
+        schedule.every().day.at("20:00").do(time_based_comment)  # 夜8時
+        schedule.every().day.at("21:00").do(time_based_comment)  # 夜9時
+        schedule.every().sunday.at("12:00").do(time_based_comment)  # 日曜の昼12時
+        
+        print("咲季アラートシステムが開始されました...")
+        print("終了するには Ctrl+C を押してください")
+        
+        # バックグラウンドでスケジュールを実行
+        while True:
+            schedule.run_pending()
+            time.sleep(60)  # 1分間隔でチェック
 
 if __name__ == "__main__":
     main()

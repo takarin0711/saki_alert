@@ -45,9 +45,9 @@ $ pip install schedule Pillow requests
 ### 手動で動作確認したい時
 ```bash
 $ source new_venv/bin/activate
-$ python3 saki_alert.py
+$ python3 saki_alert.py --test
 ```
-時間帯に応じた咲季ちゃんの画像付きアラートダイアログが表示されます。
+時間帯に応じた咲季ちゃんの画像付きアラートダイアログが即座に表示されます。
 
 ### 自動でアラート表示させる時（推奨）
 ```bash
@@ -69,6 +69,7 @@ $ python3 saki_alert.py &
 - **改善されたUI**: 見やすいレイアウトと色使いでアラートを表示
 - **アスペクト比保持**: 画像が適切なサイズで表示されます
 - **インターネット画像対応**: GitHubなどのURLから画像を直接取得して表示
+- **手動実行モード**: `--test` オプションで即座にアラートをテスト表示可能
 
 ### 旧方式（cron）での定期実行
 ```bash
